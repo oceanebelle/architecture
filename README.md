@@ -8,4 +8,10 @@ Tools for creating architecture diagrams
 
 Self hosting [Home Assistant](https://www.home-assistant.io/getting-started/) service on raspberry pi and exposing that to the internet via [Cloudflare Agro Tunnel](https://developers.cloudflare.com/argo-tunnel/reference/docker/) 
 
-![Alt](./out/homeassistant/homeassistant.png)
+via PlantUML
+
+![PlantUML](./out/homeassistant/homeassistant.png)
+
+via DrawIO
+
+![DrawIO SVG](./homeassistant.drawio.svg)

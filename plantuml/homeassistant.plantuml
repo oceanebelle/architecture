@@ -1,0 +1,25 @@
+@startuml
+
+frame "Home Network" {
+    folder "Raspberry Pi" {
+        
+        [cloudflared] <<service>> as cloudflared        
+        [cloudflared] -up-> Tunnel
+        HTTP <- [cloudflared]
+        [Web Service] -> HTTP
+        
+    }
+}
+
+cloud "Internet" {
+    frame "Cloudflare" #Orange {
+        component [Cloudflare Argo] 
+        [Cloudflare Argo] -down-> Tunnel
+        HTTPS -down- [FQDN]
+    }
+}
+
+FQDN - [Cloudflare Argo] : routes
+HTTPS <-left- [Web Client]
+
+@enduml
